@@ -7,6 +7,8 @@ const Navbar = () => {
     function transitionNabar(){
         if(window.scrollY > 100){
             handleShow(true)
+        }else{
+            handleShow(false)
         }
     }
     useEffect(() => {
@@ -16,7 +18,7 @@ const Navbar = () => {
     return (
         //only add nav_black id show works
         <div className={`nav ${show && 'nav_black'}`}>
-            <div class="nav_contents">
+            <div className="nav_contents">
             <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1280px-Netflix_2015_logo.svg.png"
                 alt=""
