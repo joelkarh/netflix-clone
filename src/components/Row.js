@@ -13,7 +13,7 @@ const Row = ({
 
     useEffect(() => {
         async function fetchData() {
-            const request = await axios.get(fetchUrl);
+            const request = await axios.get(fetchUrl); //`/discover/tv?api_key=${API_KEY}&with_networks=213`,
             setMovies(request.data.results);
             return request
         }
