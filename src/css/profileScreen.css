@@ -45,3 +45,8 @@ display: flex;
     font-weight: 600;
     cursor: pointer;
 }
+.profile__ScreenDetails > h3{
+    margin-top: 20px;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+}

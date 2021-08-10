@@ -1,4 +1,4 @@
-import firebase from 'firebase';
+import firebase from "firebase";
 const firebaseConfig = {
     apiKey: "AIzaSyCfKF3XYGvKQlngrUp9ynl0hbjPexpFU6o",
     authDomain: "netflix-build-78d9a.firebaseapp.com",
@@ -13,4 +13,4 @@ const firebaseConfig = {
   const auth = firebase.auth();
 
 export {auth};
-export default db;
+export default db; 

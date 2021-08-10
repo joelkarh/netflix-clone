@@ -4,19 +4,19 @@ import { useHistory } from 'react-router-dom';
 import '../css/navbar.css';
 
 const Navbar = () => {
-    const [show, handleShow]=useState(false)
+    const [show, handleShow]=useState(false) // 
     const history = useHistory() // keeps history of links
 
-    function transitionNabar(){
+    function transitionNavbar(){
         if(window.scrollY > 100){
             handleShow(true)
         }else{
-            handleShow(false)
+            handleShow(false) 
         }
     }
     useEffect(() => {
-        window.addEventListener("scroll",transitionNabar);
-        return () => window.removeEventListener("scroll",transitionNabar)
+        window.addEventListener("scroll",transitionNavbar);
+        return () => window.removeEventListener("scroll",transitionNavbar)
     },[]);
     return (
         //only add nav_black id show works

@@ -17,32 +17,32 @@ function App() {
             if(userAuth){
                 // console.log(userAuth);
                 //logged in
-                dispatch(login({
+                dispatch(
+                    login({
                     uid: userAuth.uid,
-                    email:  userAuth.email,
+                    email: userAuth.email,
                 }))
             }else{
                 //logged out
                 dispatch(logout())
             }
         });
+
         return unsubscribe;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
     },[dispatch])
     return (
         <div className="app">
             <Router>
-                <Switch>
-                    <Route path="/profile">
-                        <ProfileScreen/>
-                    </Route>
-                </Switch>
                 {/* A <Switch> looks through its children <Route>s and
                 renders the first one that matches the current URL. */}
                 {!user?(<LoginScreen/>) :
                 (<Switch>
                     <Route exact path="/">
                         <HomeScreen/>
+                    </Route>
+                    <Route path="/profile">
+                        <ProfileScreen/>
                     </Route>
                 </Switch>
                 )}
